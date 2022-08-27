@@ -1,0 +1,13 @@
+import mongoose, { Schema } from 'mongoose';
+
+const UserOTPVerificationSchema = new Schema({
+    userId: String,
+    otp: String,
+    createdAt: Date,
+    expiresAt: Date,
+   
+});
+
+export const UserOTPVerification = mongoose.model('UserOTPVerification', UserOTPVerificationSchema);
+
+// module.exports = UserOTPVerification;
